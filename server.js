@@ -10,6 +10,7 @@ const settings = {
   httpNodeRoot: "/api",
   userDir: "./",
   flowFile: 'flows.json',
+  credentialSecret: process.env.CREDENTIAL_SECRET || 'your-secret-key', 
   functionGlobalContext: {}
 };
 
@@ -18,8 +19,11 @@ RED.init(server, settings);
 app.use(settings.httpAdminRoot, RED.httpAdmin);
 app.use(settings.httpNodeRoot, RED.httpNode);
 
-server.listen(8000, function() {
-  console.log("Node-RED running on port 8000");
+// Usar el puerto definido por Render en la variable de entorno PORT, o 8000 por defecto
+const PORT = process.env.PORT || 8000;
+
+server.listen(PORT, function() {
+  console.log(`Node-RED running on port ${PORT}`);
 });
 
 RED.start();

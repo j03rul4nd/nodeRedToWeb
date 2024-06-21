@@ -1,10 +1,21 @@
 {
     "node-red": {
         "name": "node-red",
-        "version": "2.2.3-git",
+        "version": "4.0.0-git",
         "local": false,
         "user": false,
         "nodes": {
+            "junction": {
+                "name": "junction",
+                "types": [
+                    "junction"
+                ],
+                "enabled": true,
+                "local": false,
+                "user": false,
+                "module": "node-red",
+                "file": "C:\\repo\\noderedWeb\\node_modules\\@node-red\\nodes\\core\\common\\05-junction.js"
+            },
             "inject": {
                 "name": "inject",
                 "types": [
@@ -83,6 +94,17 @@
                 "user": false,
                 "module": "node-red",
                 "file": "C:\\repo\\noderedWeb\\node_modules\\@node-red\\nodes\\core\\common\\90-comment.js"
+            },
+            "global-config": {
+                "name": "global-config",
+                "types": [
+                    "global-config"
+                ],
+                "enabled": true,
+                "local": false,
+                "user": false,
+                "module": "node-red",
+                "file": "C:\\repo\\noderedWeb\\node_modules\\@node-red\\nodes\\core\\common\\91-global-config.js"
             },
             "unknown": {
                 "name": "unknown",
